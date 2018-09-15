@@ -1,0 +1,12 @@
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: _getValue($padding, default);
+    font-size: 1.6em;
+    color: #fff;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+    position: fixed;
+    height: calc(100vh - #{_getValue($header, height)});
+}

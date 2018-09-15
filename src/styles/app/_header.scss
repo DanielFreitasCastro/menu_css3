@@ -1,0 +1,12 @@
+header {
+    height: _getValue($header, height);
+    padding: _getValue($padding, default);
+    background-color: darken($color: _palette(primary), $amount: 10);
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+}

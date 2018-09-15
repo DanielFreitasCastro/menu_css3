@@ -1,0 +1,106 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: _palette(font);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
+    letter-spacing: .05em;
+}
+
+body {
+    background-color: #cecece;
+    &.onload {
+        input,
+        button.btn {
+            opacity: .5;
+            cursor: no-drop;
+        }
+        main {
+            opacity: .7;
+        }
+    }
+}
+
+button.btn {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0.3em .2em;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 1px 3px 6px 2px rgba(0, 0, 0, .2);
+    transition: opacity .3s ease-in-out, color .3s ease-in-out, background .3s ease-in-out;
+    ;
+    &:hover {
+        background: #fff;
+        color: _palette(primary);
+    }
+    @media screen and (max-width: _getValue($screen, xs)) {
+        font-size: .9em;
+    }
+}
+
+
+#loader {
+    left: 50%;
+    top: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    display: block;
+    z-index: 5;
+    color: darken($color: _palette(primary), $amount: 10);
+    &.with-text {
+        padding: 10px;
+        background: rgba(0, 0, 0, .5);
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 1px 2px 8px 1px rgba(0, 0, 0, .4);
+        span {
+            margin-left: 10px;
+            font-size: 1.5em;
+        }
+    }
+    &[hidden="true"] {
+        display: none !important;
+    }
+    .spinner {
+        box-sizing: border-box;
+        stroke: darken($color: _palette(primary), $amount: 10);
+        stroke-width: 3px;
+        transform-origin: 50%;
+        animation: line 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite, rotate 1.6s linear infinite;
+    }
+    @keyframes rotate {
+        from {
+            transform: rotate(0);
+        }
+        to {
+            transform: rotate(450deg);
+        }
+    }
+    @keyframes line {
+        0% {
+            stroke-dasharray: 2, 85.964;
+            transform: rotate(0);
+        }
+        50% {
+            stroke-dasharray: 65.973, 21.9911;
+            stroke-dashoffset: 0;
+        }
+        100% {
+            stroke-dasharray: 2, 85.964;
+            stroke-dashoffset: -65.973;
+            transform: rotate(90deg);
+        }
+    }
+}

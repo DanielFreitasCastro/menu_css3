@@ -1,0 +1,19 @@
+{
+  "name": "base",
+  "authors": [
+    "Castro <dfcastro321@gmail.com>"
+  ],
+  "description": "",
+  "main": "./app.js",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "build"
+  ],
+  "dependencies": {}
+}

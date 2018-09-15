@@ -5,8 +5,4 @@ bower_components/
 
 node_modules/
 
-preview/
-
-dist/
-
 package-lock\.json

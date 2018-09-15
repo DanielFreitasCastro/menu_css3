@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/scripts/app.js",
-  "scripts": {},
+  "scripts": {
+    "postinstall": "bower install"
+  },
   "author": "Daniel Castro",
   "license": "MIT",
   "devDependencies": {
